@@ -15,14 +15,16 @@ import {
   View,
   Alert
 } from 'react-native';
+import Menus from './Components/Menus';
 
 
 function App(): JSX.Element {
-  const onPressLearnMore = "Youhou";
   const Separator = () => <View style={styles.separator} />
 
   return (
     <SafeAreaView style={styles.container}>
+
+            <Menus style={styles.navigation} />
         <View>
             <Text style={styles.title}>
                 Ici, on a des TRUCKS A FAIRE !
@@ -58,12 +60,13 @@ function App(): JSX.Element {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        justifyContent: 'center',
-        marginHorizontal: 16,
+        paddingHorizontal: 16,
+        backgroundColor: '#552264',
     },
     title: {
         textAlign: 'center',
         marginVertical: 8,
+        color: 'white',
     },
     fixToText: {
         flexDirection: 'row',
