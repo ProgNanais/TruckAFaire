@@ -1,7 +1,11 @@
 import React from 'react';
-import { Text, View, Image, StyleSheet, SafeAreaView } from 'react-native';
+import { Text, View, Image, StyleSheet, SafeAreaView, Pressable } from 'react-native';
+import {createNativeStackNavigator} from '@react-navigation/native-stack';
+import { useNavigation } from '@react-navigation/native';
+
 
 const Menus = () => {
+    const navigation = useNavigation();
     return (
     <SafeAreaView>
         <View style={styleMenu.containerM}>
@@ -10,10 +14,12 @@ const Menus = () => {
                 style={styleMenu.img}
              />
              <Text style={styleMenu.title}>Trucs À Faire</Text>
-             <Image
-                source={require('../assets/images/ajouter.png')}
-                style={styleMenu.icon}
-             />
+             <Pressable onPress={() => navigation.navigate('Formulaire')}>
+                 <Image
+                    source={require('../assets/images/ajouter.png')}
+                    style={styleMenu.icon}
+                 />
+             </Pressable>
         </View>
     </SafeAreaView>
     );
