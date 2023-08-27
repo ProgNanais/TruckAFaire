@@ -6,11 +6,6 @@ const ListeTrucs = () => {
         <ScrollView>
             <View style={styleListe.listeVide}>
                 <Text style={styleListe.title}>Pas encore de truc à faire ?</Text>
-                <Button
-                    title="Ajouter un TAF"
-                    color="#8b32fd"
-                    onPress={() => Alert.alert('En cours de construction')}
-                />
             </View>
         </ScrollView>
     )
