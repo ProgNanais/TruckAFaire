@@ -13,7 +13,8 @@ import {
   Button,
   useColorScheme,
   View,
-  Alert
+  Alert,
+  TouchableOpacity
 } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
@@ -32,12 +33,13 @@ function HomeScreen({ navigation }) {
                     </View>
 
             <ListeTrucs />
-
-            <Button
-                title="Ajouter un TAF"
-                color="#8b32fd"
-                onPress={() => navigation.navigate('Formulaire')}
-            />
+            <View style={styles.btn}>
+                <Button
+                    title="Ajouter un TAF"
+                    color="#8b32fd"
+                    onPress={() => navigation.navigate('Formulaire')}
+                />
+            </View>
         </View>
     );
 }
@@ -94,6 +96,12 @@ const styles = StyleSheet.create({
     fixToText: {
         flexDirection: 'row',
         justifyContent: 'space-between',
+    },
+    btn: {
+        height: 50,
+        width: '90%',
+        margin: 10,
+        textAlign: 'center',
     },
 });
 
