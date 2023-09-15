@@ -7,7 +7,7 @@ const Formulaire = ({navigation}) => {
     const [price, setPrice] = useState('');
     const [value, onChangeText] = React.useState('Tu veux en dire plus ?')
     const categorie = ["Voyage", "Visite", "Zoo", "Parc d'attraction", "Musée"]
-    const priorite = ["Très fortement", "Fortement", "Moyennement", "Faiblement", "Très faiblement"]
+    const priorite = ["Très forte", "Forte", "Moyenne", "Faible", "Très faible"]
 
 
     return (

@@ -21,6 +21,7 @@ import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import Menus from './Components/Menus';
 import ListeTrucs from './Components/ListeTrucs';
 import Formulaire from './Components/Formulaire';
+import Details from './Components/Details';
 import Navigator from './Components/Navigator';
 
 function HomeScreen({ navigation }) {
@@ -31,7 +32,6 @@ function HomeScreen({ navigation }) {
                             Ici, on a des TRUCS À FAIRE !
                         </Text>
                     </View>
-
             <ListeTrucs />
             <View style={styles.btn}>
                 <Button
@@ -76,6 +76,18 @@ function App( {navigation} ): JSX.Element {
                     headerTitleAlign: 'center',
                 }}
             />
+            <Stack.Screen
+                name="Details"
+                component={Details}
+                options={{
+                     title: 'En détails',
+                     headerTintColor: 'white',
+                     headerStyle: {
+                          backgroundColor: '#313131',
+                     },
+                     headerTitleAlign: 'center',
+                }}
+             />
         </Stack.Navigator>
     </NavigationContainer>
   );
@@ -98,11 +110,12 @@ const styles = StyleSheet.create({
         justifyContent: 'space-between',
     },
     btn: {
+        position: 'absolute',
+        bottom: 0,
+        width: '100%',
+        left: 15,
         height: 50,
-        width: '90%',
-        margin: 10,
-        textAlign: 'center',
-    },
+    }
 });
 
 export default App;
